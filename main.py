@@ -2,18 +2,25 @@ import tkinter
 from tkinter import ttk
 root = tkinter.Tk()
 root.title("OneUI Debloater")
+root.iconbitmap('icon.ico')
 img = tkinter.PhotoImage(file='bannerpng.png')
 tkinter.Label(
     root,
     image=img
 ).pack()
-
+def start_uninstall(evvent=None):
+    root.destroy()
+    confirm = tkinter.Tk()
+    confirm.geometry("400x200")
+    ttk.Label(confirm,text="Parsing selected into one variable...").pack()
+    confirm.update()
+    uninstall=[arzone.get(),ardrawing.get()]
 ##Uninstallers
 #Definiting what should be uninsstalled
 arzone = tkinter.StringVar()
 ardrawing = tkinter.StringVar()
 visionarapps = tkinter.StringVar()
-#bixpypack = Bixby,Bixby Vision,Bixby Voice,Bixby Vision Framework
+#bixpypack = Bixby,Bixby Vision,Bixby Voice,Bixby Vision Framework,Bixby Service
 bixbypack = tkinter.StringVar()
 bookmarkprovider = tkinter.StringVar()
 briefing = tkinter.StringVar()
@@ -60,7 +67,33 @@ passautofill = tkinter.StringVar()
 bixbywakeup = tkinter.StringVar()
 dexlauncher=tkinter.StringVar()
 googledocs=tkinter.StringVar()
-
-
+microsoftappmanager = tkinter.StringVar()
+voicenote = tkinter.StringVar()
+maps = tkinter.StringVar()
+livewalpaperpicker=tkinter.StringVar()
+swiftkey= tkinter.StringVar()
+samsungkeyboard = tkinter.StringVar()
+peoplestripe=tkinter.StringVar()
+myfiles=tkinter.StringVar()
+reminder=tkinter.StringVar()
+daemonapp=tkinter.StringVar()
+audiohearing=tkinter.StringVar()
+aremojieditor=tkinter.StringVar()
+webmanual=tkinter.StringVar()
+simcard=tkinter.StringVar()
+samsungtips=tkinter.StringVar()
+avatarstickers=tkinter.StringVar()
+routines=tkinter.StringVar()
+kidsinstaller=tkinter.StringVar()
+yandexsearch=tkinter.StringVar()
+#Checkboxes
+ttk.Label(root,text="Select the apps you would like to uninstall",font=("Calibri", 17)).pack()
 ttk.Checkbutton(root,text="Ar Zone",variable=arzone,onvalue='1',offvalue='0').pack()
+ttk.Checkbutton(root,text="Ar Drawing",variable=ardrawing,onvalue='1',offvalue='0').pack()
+ttk.Checkbutton(root,text="Vision Ar Apps",variable=visionarapps,onvalue='1',offvalue='0').pack()
+ttk.Checkbutton(root,text="Bixby Pack",variable=bixbypack,onvalue='1',offvalue='0').pack()
+ttk.Label(root,text="Bixby,Bixby Vision,Bixby Voice,Bixby Vision Framework,Bixby Service").pack()
+ttk.Checkbutton(root,text="Bookmark Provider",variable=bookmarkprovider,onvalue='1',offvalue='0').pack()
+ttk.Checkbutton(root,text="Briefing",variable=briefing,onvalue='1',offvalue='0').pack()
+ttk.Button(root,text="Get rid of selected bloatware!",command=start_uninstall).pack()
 root.mainloop()
