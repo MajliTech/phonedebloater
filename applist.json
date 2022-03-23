@@ -1,0 +1,17 @@
+{
+    "packages":{
+        "AR Zone":"com.samsung.android.arzone",
+        "AR Drawing":"com.samsung.android.ardrawing",
+        "Vision AR Apps": "com.samsung.android.visionarapps",
+        "Bixby": "com.samsung.android.bixby.agent",
+        "Bixby Vision": "com.samsung.android.visionintelligence",
+        "Bixby Voice": "com.samsung.android.bixby.agent.dummy",
+        "Bixby Vision Framework":"com.samsung.android.bixbyvision.framework",
+        "Bookmark Provider": "com.android.bookmarkprovider",
+        "Briefing": "flipboard.boxer.app",
+        "Chrome": "com.android.chrome",
+        "DECO PIC":"com.samsung.android.livestickers",
+        "Dex on PC": "com.sec.android.app.dexonpc",
+        "Device Health Services": "com.google.android.apps.turbo"
+    }
+}
