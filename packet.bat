@@ -11,108 +11,11 @@ if /i "%input%"=="amen" goto :amen
 goto :top
 
 :amen
-echo Ar Zone
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.arzone
 
-echo Ar-зарисовка
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.ardrawing
 
-echo Ar-приложения
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.visionarapps
 
-echo Bixby
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.bixby.agent
 
-echo Bixby Vision
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.visionintelligence
 
-echo Bixby Voice
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.bixby.agent.dummy
-
-echo Bixby Vision Framework
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.bixbyvision.framework
-
-echo Bookmark Provider
-%~dp0adb shell pm uninstall --user 0 com.android.bookmarkprovider
-
-echo Briefing
-%~dp0adb shell pm uninstall --user 0 flipboard.boxer.app
-
-echo Chrome
-%~dp0adb shell pm uninstall --user 0 com.android.chrome
-
-echo DECO PIC
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.livestickers
-
-echo Dex для ПК
-%~dp0adb shell pm uninstall --user 0 com.sec.android.app.dexonpc
-
-echo Device Health Services
-%~dp0adb shell pm uninstall --user 0 com.google.android.apps.turbo
-
-echo Duo
-%~dp0adb shell pm uninstall --user 0 com.google.android.apps.tachyon
-
-echo Facebook
-%~dp0adb shell pm uninstall --user 0 com.facebook.katana
-%~dp0adb shell pm uninstall --user 0 com.facebook.system
-%~dp0adb shell pm uninstall --user 0 com.facebook.appmanager
-%~dp0adb shell pm uninstall --user 0 com.facebook.services
-
-echo Galaxy Themes
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.themestore
-
-echo Galaxy Wearable
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.app.watchmanager
-
-echo Game Booster
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.game.gametools
-
-echo Game Launcher
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.game.gamehome
-
-echo Game Optimizing Service
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.game.gos
-
-echo Gmail
-%~dp0adb shell pm uninstall --user 0 com.google.android.gm
-
-echo Google
-%~dp0adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox
-
-echo Google Play Services for AR
-%~dp0adb shell pm uninstall --user 0 com.google.ar.core
-
-echo Google Play Фильмы
-%~dp0adb shell pm uninstall --user 0 com.google.android.videos
-
-echo Google Ассистент
-%~dp0adb shell pm uninstall --user 0 com.android.hotwordenrollment.xgoogle
-%~dp0adb shell pm uninstall --user 0 com.android.hotwordenrollment.okgoogle
-
-echo Google Фото
-%~dp0adb shell pm uninstall --user 0 com.google.android.apps.photos
-
-echo Health Service
-%~dp0adb shell pm uninstall --user 0 com.sec.android.service.health
-
-echo Link Sharing
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.app.simplesharing
-
-echo Office
-%~dp0adb shell pm uninstall --user 0 com.microsoft.office.officehubrow
-
-echo OneDrive
-%~dp0adb shell pm uninstall --user 0 com.microsoft.skydrive
-
-echo Outlook
-%~dp0adb shell pm uninstall --user 0 com.microsoft.office.outlook
-
-echo Private Share
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.privateshare
-
-echo Samsung Daily
-%~dp0adb shell pm uninstall --user 0 com.samsung.android.app.spage
 
 echo Samsung DeX
 %~dp0adb shell pm uninstall --user 0 com.sec.android.desktopmode.uiservice

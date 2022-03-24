@@ -1,17 +1,107 @@
 {
-    "packages":{
-        "AR Zone":"com.samsung.android.arzone",
-        "AR Drawing":"com.samsung.android.ardrawing",
-        "Vision AR Apps": "com.samsung.android.visionarapps",
-        "Bixby": "com.samsung.android.bixby.agent",
-        "Bixby Vision": "com.samsung.android.visionintelligence",
-        "Bixby Voice": "com.samsung.android.bixby.agent.dummy",
-        "Bixby Vision Framework":"com.samsung.android.bixbyvision.framework",
-        "Bookmark Provider": "com.android.bookmarkprovider",
-        "Briefing": "flipboard.boxer.app",
-        "Chrome": "com.android.chrome",
-        "DECO PIC":"com.samsung.android.livestickers",
-        "Dex on PC": "com.sec.android.app.dexonpc",
-        "Device Health Services": "com.google.android.apps.turbo"
+    "needs_pages": true,
+    "total_pages": 3,
+    "packages": {
+        "1": {
+            "AR Zone": [
+                "com.samsung.android.arzone"
+            ],
+            "AR Drawing": [
+                "com.samsung.android.ardrawing"
+            ],
+            "Vision AR Apps": [
+                "com.samsung.android.visionarapps"
+            ],
+            "Bixby": [
+                "com.samsung.android.bixby.agent"
+            ],
+            "Bixby Vision": [
+                "com.samsung.android.visionintelligence"
+            ],
+            "Bixby Voice": [
+                "com.samsung.android.bixby.agent.dummy"
+            ],
+            "Bixby Vision Framework": [
+                "com.samsung.android.bixbyvision.framework"
+            ],
+            "Bookmark Provider": [
+                "com.android.bookmarkprovider"
+            ],
+            "Briefing": [
+                "flipboard.boxer.app"
+            ],
+            "Chrome": [
+                "com.android.chrome"
+            ],
+            "DECO PIC": [
+                "com.samsung.android.livestickers"
+            ],
+            "Dex on PC": [
+                "com.sec.android.app.dexonpc"
+            ],
+            "Device Health Services": [
+                "com.google.android.apps.turbo"
+            ],
+            "Duo": [
+                "com.google.android.apps.tachyon"
+            ],
+            "Facebook": [
+                "com.facebook.katana",
+                "com.facebook.system",
+                "com.facebook.appmanager",
+                "com.facebook.services"
+            ],
+            "Galaxy Themes": [
+                "com.samsung.android.themestore"
+            ],
+            "Galaxy Wearable": [
+                "com.samsung.android.app.watchmanager"
+            ]
+        },
+        "2": {
+            "Game Booster": [
+                "com.samsung.android.game.gametools"
+            ],
+            "Game Launcher": [
+                "com.samsung.android.game.gamehome"
+            ],
+            "Game Optimizing Service": [
+                "com.samsung.android.game.gos"
+            ],
+            "Gmail": [
+                "com.google.android.gm"
+            ],
+            "Google": [
+                "com.google.android.googlequicksearchbox"
+            ],
+            "Google Play Services for AR": [
+                "com.google.ar.core"
+            ],
+            "Google Play Videos": [
+                "com.google.android.videos"
+            ],
+            "Google Assistant": [
+                "com.android.hotwordenrollment.xgoogle",
+                "com.android.hotwordenrollment.okgoogle"
+            ],
+            "Google Photos": [
+                "com.google.android.apps.photos"
+            ],
+            "Link Sharing": [
+                "com.samsung.android.app.simplesharing"
+            ],
+            "Office": [
+                "com.microsoft.office.outlook"
+            ],
+            "Private Share": [
+                "com.samsung.android.privateshare"
+            ],
+            "Samsung Daily": [
+                "com.samsung.android.app.spage"
+            ],
+            "Samsung DeX":["com.sec.android.desktopmode.uiservice"],
+            "Samsung Galaxy Freinds":["com.sec.android.desktopmode.uiservice"]
+        },
+        "3":{}
     }
 }
