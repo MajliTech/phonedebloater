@@ -162,7 +162,7 @@ def element_loader():
             j["packages"][str(j["total_pages"])]
         except Exception as e:
             #..and if missing, show this to a user.
-            ttk.Label(root,text=f"Invalid applist.json! (Total pages not defined.)").pack()
+            ttk.Label(root,text=f"Invalid applist.json! (Total pages not defined or defined not propetly. )").pack()
             return
         page = ttk.Label(root,text=f"Displaying page {page_numba} of {j['total_pages']}")
         page.pack()

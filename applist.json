@@ -1,6 +1,6 @@
 {
     "needs_pages": true,
-    "total_pages": 3,
+    "total_pages": 4,
     "packages": {
         "1": {
             "AR Zone": [
@@ -99,9 +99,83 @@
             "Samsung Daily": [
                 "com.samsung.android.app.spage"
             ],
-            "Samsung DeX":["com.sec.android.desktopmode.uiservice"],
-            "Samsung Galaxy Freinds":["com.sec.android.desktopmode.uiservice"]
+            "Samsung DeX": [
+                "com.sec.android.desktopmode.uiservice"
+            ],
+            "Samsung Galaxy Freinds": [
+                "com.sec.android.desktopmode.uiservice"
+            ]
         },
-        "3":{}
+        "3": {
+            "Samsung Global Goals": [
+                "com.samsung.sree"
+            ],
+            "Samsung Health": [
+                "com.sec.android.app.shealth"
+            ],
+            "Samsung Internet": [
+                "com.sec.android.app.sbrowser"
+            ],
+            "Samsung Kids": [
+                "com.sec.android.app.kidshome"
+            ],
+            "Samsung Notes": [
+                "com.samsung.android.app.notes"
+            ],
+            "Samsung Pass": [
+                "com.samsung.android.authfw"
+            ],
+            "Samsung Pass Provider": [
+                "com.samsung.android.samsungpass"
+            ],
+            "Samsung Pay": [
+                "com.samsung.android.spay"
+            ],
+            "Secure Folder": [
+                "com.samsung.knox.securefolder"
+            ],
+            "Smart Things": [
+                "com.samsung.android.beaconmanager",
+                "com.samsung.android.oneconnect"
+            ],
+            "Smart Tutor": [
+                "com.rsupport.rs.activity.rsupport.aas2"
+            ],
+            "SwiftKey factory settings": [
+                "com.touchtype.swiftkey",
+                "com.swiftkey.swiftkeyconfigurator"
+            ],
+            "Wearable Manager Installer": [
+                "com.samsung.android.app.watchmanagerstub"
+            ],
+            "YouTube": [
+                "com.google.android.youtube"
+            ]
+        },
+        "4": {
+            "YouTube Music": [
+                "com.google.android.apps.youtube.music"
+            ],
+            "Samsung Pass Autofill": [
+                "com.samsung.android.samsungpassautofill"
+            ],
+            "Bixby Wakeup": [
+                "com.samsung.android.bixby.wakeup"
+            ],
+            "Samsung DeX Desktop Laucher": [
+                "com.sec.android.app.desktoplauncher"
+            ],
+            "Google Drive": [
+                "com.google.android.apps.docs"
+            ],
+            "Your Phone Companion": [
+                "com.microsoft.appmanager"
+            ],
+            "Voice Note":["com.sec.android.app.voicenote"],
+            "Maps":["com.google.android.apps.maps"],
+            "Live Wallpaper picker":["com.android.wallpaper.livepicker"],
+            "Microsoft SwiftKey": ["com.touchtype.swiftkey"],
+            "Samsung Keyboard":["com.samsung.android.honeyboard"]
+        }
     }
 }
