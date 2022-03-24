@@ -1,3 +1,4 @@
+from dataclasses import replace
 from logging import exception
 import tkinter
 from tkinter import ttk
@@ -90,53 +91,51 @@ def confirm_uninstall(evvent=None):
     ttk.Label(confirm,text="Are you sure about what you're going to do? Please make sure you\nhave alternative apps for uninstalled.").pack() #grid(column=0,row=0)
     confirm.update()
     ttk.Button(confirm, text="Yes",command=real_uninstaller).pack() #grid(row=1,column=0)
-    ttk.Button(confirm, text="No",command=confirm.destroy).pack() #grid(row=1,column=1)
+    ttk.Button(confirm, text="No",command=confirm.destroy).pack() #grid(row=1,column=1
 def chosen():
-    pass
+    global selector
+    global dire
+    global opt
+    global applist
+    global chooser
+    global PATH
+    ch=selector.get()
+    appfilemoment=list(opt).index(ch)
+    applist = open(dire[appfilemoment])
+    chooser.destroy()
+    PATH = dire[appfilemoment].replace("\\applist.json","").replace("/applist.json","")
+    return
 def choose_appfile():
-    global seleted
+    global selector
+    global dire
+    global chooser
+    global opt
     chooser=tkinter.Tk()
-    seleted=tkinter.StringVar()
     ttk.Label(chooser,text="Please choose which appfile you want to use:").pack()
     opt = []
+    dire=[]
     for i in os.listdir("app-lists"):
         f = open(f"app-lists/{i}/applist.json")
         pa=""
         for c in f.readlines():
             pa = pa+c.replace("\n","")
         opt.append(json.loads(pa)["title"])
+        dire.append(f"app-lists/{i}/applist.json")
+        f.close()
     opt = tuple(opt)
-    selector = ttk.Combobox(chooser,textvariable =seleted,values=opt,state="readonly")
+    selector = ttk.Combobox(chooser,values=opt,state="readonly")
     selector.current(0)
     selector.pack()
     apply = ttk.Button(chooser,text="Apply",command=chosen)
     apply.pack()
+
     chooser.mainloop()
 choose_appfile()
-#Window
-root = tkinter.Tk()
-#Icon and title
-root.title("OneUI Debloater")
-root.iconbitmap('icon.ico')
-#App banner
-img = tkinter.PhotoImage(file='bannerpng.png')
-banner = tkinter.Label(
-    root,
-    image=img
-)
-banner.pack() #grid(column=0,row=0)
-
-
-
-
-
-
-
 
 #load json and make some checkboxes with it
 
-applist = open("applist.json")
 
+#JSON Stuff
 whole_json=""
 for i in applist.readlines():
     whole_json = whole_json+ i.replace("\n","")
@@ -144,6 +143,38 @@ def parse(event=None):
     uninstall=[]
     for a in importer:
         uninstall.append(a.get())
+j=json.loads(whole_json)
+
+
+#Window
+root = tkinter.Tk()
+#Icon and title
+root.title(f"{j['title']} Debloater")
+if os.path.exists(f"{PATH}/icon.ico"):
+    root.iconbitmap(f'{PATH}/icon.ico')
+else:
+    root.iconbitmap("img/icon.ico")
+if os.path.exists(f"{PATH}/banner.png"):
+    #App banner
+    img = tkinter.PhotoImage(file=f'{PATH}/banner.png')
+    banner = tkinter.Label(
+        root,
+        image=img
+    )
+    banner.pack() #grid(column=0,row=0)
+else:
+    img = tkinter.PhotoImage(file=f'img/banner.png')
+    banner = tkinter.Label(
+        root,
+        image=img
+    )
+    banner.pack() #grid(column=0,row=0)
+
+
+
+
+
+
 
 
 
@@ -151,7 +182,7 @@ importer=[]
 counter=0
 page_numba=1
 checkboxes=[]
-j=json.loads(whole_json)
+
 #json loaded,  make window with it.
 def element_loader():
     global counter

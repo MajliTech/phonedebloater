@@ -4,7 +4,7 @@
     "title":"MIUI",
     "packages": {
         "1": {
-            "AR Zone": [
+            "AR MIUI": [
                 "com.samsung.android.arzone"
             ],
             "AR Drawing": [
