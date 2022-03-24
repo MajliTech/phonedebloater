@@ -1,6 +1,7 @@
 {
     "needs_pages": true,
     "total_pages": 5,
+    "title":"MIUI",
     "packages": {
         "1": {
             "AR Zone": [

@@ -5,22 +5,9 @@ import json
 from numpy import who
 import subprocess
 import json
-#Window
-root = tkinter.Tk()
-#Icon and title
-root.title("OneUI Debloater")
-root.iconbitmap('icon.ico')
-#App banner
-img = tkinter.PhotoImage(file='bannerpng.png')
-banner = tkinter.Label(
-    root,
-    image=img
-)
-banner.pack() #grid(column=0,row=0)
+import os
 
-
-
-#Functions for pages
+# #Functions for pages
 def next_page(event=None):
     global j
     global page_numba
@@ -104,6 +91,43 @@ def confirm_uninstall(evvent=None):
     confirm.update()
     ttk.Button(confirm, text="Yes",command=real_uninstaller).pack() #grid(row=1,column=0)
     ttk.Button(confirm, text="No",command=confirm.destroy).pack() #grid(row=1,column=1)
+def chosen():
+    pass
+def choose_appfile():
+    global seleted
+    chooser=tkinter.Tk()
+    seleted=tkinter.StringVar()
+    ttk.Label(chooser,text="Please choose which appfile you want to use:").pack()
+    opt = []
+    for i in os.listdir("app-lists"):
+        f = open(f"app-lists/{i}/applist.json")
+        pa=""
+        for c in f.readlines():
+            pa = pa+c.replace("\n","")
+        opt.append(json.loads(pa)["title"])
+    opt = tuple(opt)
+    selector = ttk.Combobox(chooser,textvariable =seleted,values=opt,state="readonly")
+    selector.current(0)
+    selector.pack()
+    apply = ttk.Button(chooser,text="Apply",command=chosen)
+    apply.pack()
+    chooser.mainloop()
+choose_appfile()
+#Window
+root = tkinter.Tk()
+#Icon and title
+root.title("OneUI Debloater")
+root.iconbitmap('icon.ico')
+#App banner
+img = tkinter.PhotoImage(file='bannerpng.png')
+banner = tkinter.Label(
+    root,
+    image=img
+)
+banner.pack() #grid(column=0,row=0)
+
+
+
 
 
 
@@ -120,7 +144,6 @@ def parse(event=None):
     uninstall=[]
     for a in importer:
         uninstall.append(a.get())
-
 
 
 
@@ -179,5 +202,6 @@ def element_loader():
             counter=counter+1
     #Bloat delete, see line 70
     ttk.Button(root,text="Delete this bloat!",command=confirm_uninstall).pack()
+
 element_loader()
 root.mainloop()
