@@ -1,9 +1,6 @@
-from dataclasses import replace
-from logging import exception
 import tkinter
 from tkinter import ttk
 import json
-from numpy import who
 import subprocess
 import json
 import os
@@ -34,7 +31,7 @@ def real_uninstaller():
     un_win = tkinter.Tk()
     #Title and icon stuff
     un_win.title("Uninstalling...")
-    un_win.iconbitmap('icon.ico')
+    un_win.iconbitmap('img/icon.ico')
     #Setting a text and progress bar
     text=ttk.Label(un_win,text="Preparing...")
     bar = ttk.Progressbar(un_win, orient='horizontal', length=400, mode='indeterminate')
@@ -86,7 +83,7 @@ def confirm_uninstall(evvent=None):
     confirm = tkinter.Tk()
 
     confirm.title("U sure?")
-    confirm.iconbitmap('icon.ico')
+    confirm.iconbitmap('img/icon.ico')
     confirm.geometry("400x200")
     ttk.Label(confirm,text="Are you sure about what you're going to do? Please make sure you\nhave alternative apps for uninstalled.").pack() #grid(column=0,row=0)
     confirm.update()
@@ -111,6 +108,8 @@ def choose_appfile():
     global chooser
     global opt
     chooser=tkinter.Tk()
+    chooser.title("Choose appfile")
+    chooser.iconbitmap("img/icon.ico")
     ttk.Label(chooser,text="Please choose which appfile you want to use:").pack()
     opt = []
     dire=[]
